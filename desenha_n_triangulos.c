@@ -21,10 +21,16 @@
 const int LINHA = 5;
 
 void linha(int asterisco){
+    int espacos = LINHA - asterisco;
+
     //print N asterisco
     while(asterisco--)
         printf("*");
     
+    //preencher espaços em brancos da torre atual
+    while(espacos--)
+        printf(" ");
+
     printf("\t");
 }
 
