@@ -20,47 +20,42 @@
 */
 
 #include <stdio.h>
+#define ESPASSAMENTO '\t'
 
-// Tamanho da torre de asterisco
-const int LINHA = 5;
-
-void linha(int asterisco){
-    int espacos = LINHA - asterisco;
-
-    //print asteriscos
-    while(asterisco--)
-        printf("*");
-    
-    // printar espaços
-    while(espacos--)
-        printf(" ");
-    
-    printf("\t");
+void characters(char c,int quantidade){
+	while(quantidade--)
+		printf("%c",c);
+}
+void linha(int asteriscos,int espacos,int tables){
+	while (tables--){
+		characters('*',asteriscos);
+		characters(' ',espacos);
+		characters(ESPASSAMENTO,1);
+	}
+	characters('\n',1);
 }
 
-// Recebe um número > 0 e print a quantidade de triângulos
-void figura(int a){
-    int qtdEstrela = 1;
-
-    for(int i = 0; i < LINHA; i++){
-        for(int j = 0; j < a; j++)
-            linha(qtdEstrela);
-        
-        printf("\n"); 
-        qtdEstrela++;   
-    }
+void desenharTorre(int base, int torres){
+    for(int asteristicos = 1; asteristicos <= base; asteristicos++)
+	    linha(asteristicos,base-asteristicos,torres);
 }
 
 int main(){
-    int n;
+    int base;
+    int torres;
 
-    printf("Digite N: ");
-    scanf("%d", &n);
+    printf("\n Quantidade de asteriscos na base de cada torre=");
+    scanf("%d", &base);
+
+    printf(" Quantidade de torres=");
+    scanf("%d", &torres);
+
     printf("\n");
-
-    //Desenha figura
-    figura(n);
-
+	
+    if(base<0||torres<0)
+	    printf("voce nao pode colocar valores negativos\n");
+    else
+	    desenharTorre(base,torres);
 
     return 0;
 }
