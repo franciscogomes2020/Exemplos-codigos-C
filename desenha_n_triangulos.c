@@ -41,7 +41,7 @@ void desenharTorre(char character, int base, int torres){
 }
 void limparBufferDoTlecado(){
 	char c;
-	while((c=getchar())!='\n'||c==EOF);
+	while((c=getchar())!='\n' && c!=EOF);
 }
 int main(){
     int base;
