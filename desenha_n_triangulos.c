@@ -1,6 +1,10 @@
 /*
  *   Código desenvolvido por Luan Vilela     26/11/2020
- *   https://github.com/luan-vilela/Exemplos-c-digos-C
+ *   https://github.com/luan-vilela  /Exemplos-c-digos-C
+ *   License MIT - Free Software
+ *   
+ *   Editado por Francisco Gomes	     29/11/2020
+ *   https://github.com/franciscogomes2020/Exemplos-codigos-C
  *   License MIT - Free Software
  *
  * Esse código Recebe um N inteiro e desenha N triângulos na mesma linha 
@@ -21,9 +25,15 @@
 const int LINHA = 5;
 
 void linha(int asterisco){
-    //print N asterisco
+    int espacos = LINHA - asterisco;
+
+    //print asteriscos
     while(asterisco--)
         printf("*");
+    
+    // printar espaços
+    while(espacos--)
+        printf(" ");
     
     printf("\t");
 }
