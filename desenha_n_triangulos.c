@@ -7,16 +7,26 @@
  *   https://github.com/franciscogomes2020/Exemplos-codigos-C
  *   License MIT - Free Software
  *
- * Esse código Recebe um N inteiro e desenha N triângulos na mesma linha 
+ *   Esse código Recebe 3 parametros e desenha triangulos na tela 
  * 
  *       EXEMPLO DE FUNCIONAMENTO:
- *       Digite N: 6
  *
- *       *       *       *       *       *       *
- *       **      **      **      **      **      **
- *       ***     ***     ***     ***     ***     ***
- *       ****    ****    ****    ****    ****    ****
- *       *****   *****   *****   *****   *****   *****
+ *	   
+ *	   Quantidade de characteres na base de cada torre=10
+ *	   Quantidade de torres=3
+ *	   characteres da torre=*
+ *	
+ *	 *               *               *
+ *	 **              **              **
+ *	 ***             ***             ***
+ *	 ****            ****            ****
+ *	 *****           *****           *****
+ *	 ******          ******          ******
+ *	 *******         *******         *******
+ *	 ********        ********        ********
+ *	 *********       *********       *********
+ *	 **********      **********      **********
+ *	 
 */
 
 #include <stdio.h>
